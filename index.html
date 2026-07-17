@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier Kitchen Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="experience" aria-label="Configuratore cucine Atelier Casa Milano">
+      <aside class="control-panel">
+        <header class="brand-bar">
+          <div>
+            <p class="eyebrow">Atelier Casa Milano</p>
+            <h1>Kitchen Experience</h1>
+          </div>
+          <div class="progress-copy">
+            <strong id="progress-percent">0%</strong>
+            <span id="progress-status">Inizia il tuo progetto</span>
+          </div>
+        </header>
+
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <button class="panel-back-button" type="button" data-back-button hidden>← Indietro</button>
+
+        <section class="intro-screen active-screen" data-screen="intro">
+          <div class="screen-copy intro-copy">
+            <p class="section-label">Una consulenza guidata, non un semplice form</p>
+            <h2>Progetta la cucina che immagini.</h2>
+            <p>Scegli ciò che ti rappresenta. La cucina a destra cambierà dopo ogni selezione, con una leggera dissolvenza.</p>
+          </div>
+          <button class="primary-button" type="button" id="start-button">Inizia il progetto <span>→</span></button>
+        </section>
+
+        <section class="step-screen" data-screen="layout" aria-labelledby="layout-title">
+          <div class="screen-copy">
+            <span class="step-number">01</span>
+            <p class="section-label">Composizione</p>
+            <h2 id="layout-title">Come vivrai la tua cucina?</h2>
+            <p>Scegli la configurazione che assomiglia di più al tuo spazio.</p>
+          </div>
+          <div class="option-grid option-grid-two">
+            <button class="option-card" type="button" data-group="layout" data-value="lineare">
+              <span class="diagram diagram-lineare" aria-hidden="true"></span>
+              <span><strong>Lineare</strong><small>Essenziale e compatta</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card" type="button" data-group="layout" data-value="angolare">
+              <span class="diagram diagram-angolare" aria-hidden="true"></span>
+              <span><strong>Angolare</strong><small>Funzionale su due pareti</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card" type="button" data-group="layout" data-value="penisola">
+              <span class="diagram diagram-penisola" aria-hidden="true"></span>
+              <span><strong>Penisola</strong><small>Conviviale e dinamica</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card" type="button" data-group="layout" data-value="isola">
+              <span class="diagram diagram-isola" aria-hidden="true"></span>
+              <span><strong>Isola</strong><small>Scenografica e centrale</small></span>
+              <i>✓</i>
+            </button>
+          </div>
+        </section>
+
+        <section class="step-screen" data-screen="look" aria-labelledby="look-title">
+          <div class="screen-copy">
+            <span class="step-number">02</span>
+            <p class="section-label">Atmosfera</p>
+            <h2 id="look-title">Quale atmosfera ti rappresenta?</h2>
+            <p>Non è solo un colore: è la sensazione che vuoi vivere ogni giorno.</p>
+          </div>
+          <div class="option-grid option-grid-three">
+            <button class="option-card mood-card" type="button" data-group="look" data-value="chiaro">
+              <span class="mood-swatch mood-light" aria-hidden="true"></span>
+              <span><strong>Luminosa</strong><small>Chiara, ariosa, minimale</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card mood-card" type="button" data-group="look" data-value="naturale">
+              <span class="mood-swatch mood-natural" aria-hidden="true"></span>
+              <span><strong>Calda e naturale</strong><small>Accogliente e materica</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card mood-card" type="button" data-group="look" data-value="scuro">
+              <span class="mood-swatch mood-dark" aria-hidden="true"></span>
+              <span><strong>Elegante e decisa</strong><small>Profonda e sofisticata</small></span>
+              <i>✓</i>
+            </button>
+          </div>
+        </section>
+
+        <section class="step-screen" data-screen="top" aria-labelledby="top-title">
+          <div class="screen-copy">
+            <span class="step-number">03</span>
+            <p class="section-label">Piano di lavoro</p>
+            <h2 id="top-title">Quale piano immagini ogni giorno?</h2>
+            <p>Il dettaglio che definisce il carattere dell'intera cucina.</p>
+          </div>
+          <div class="option-grid option-grid-two">
+            <button class="option-card material-card" type="button" data-group="top" data-value="chiaro">
+              <span class="material-swatch top-light" aria-hidden="true"></span>
+              <span><strong>Pietra chiara</strong><small>Luminosa e senza tempo</small></span>
+              <i>✓</i>
+            </button>
+            <button class="option-card material-card" type="button" data-group="top" data-value="scuro">
+              <span class="material-swatch top-dark" aria-hidden="true"></span>
+              <span><strong>Pietra antracite</strong><small>Decisa e contemporanea</small></span>
+              <i>✓</i>
+            </button>
+          </div>
+        </section>
+
+        <section class="step-screen project-screen" data-screen="project" aria-labelledby="project-title">
+          <div class="screen-copy compact-copy">
+            <span class="step-number">04</span>
+            <p class="section-label">Il tuo progetto</p>
+            <h2 id="project-title">Raccontaci qualcosa in più.</h2>
+          </div>
+
+          <div class="project-choice-group" data-project-group="budget">
+            <p class="choice-label">Budget indicativo</p>
+            <div class="compact-choice-grid">
+              <button class="compact-choice" type="button" data-project-field="budget" data-value="10.000 € – 20.000 €">
+                <strong>10–20 mila €</strong><small>Essenziale e curata</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="budget" data-value="20.000 € – 35.000 €">
+                <strong>20–35 mila €</strong><small>La fascia più scelta</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="budget" data-value="Oltre 35.000 €">
+                <strong>Oltre 35 mila €</strong><small>Progetto su misura</small><i>✓</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="project-choice-group" data-project-group="timing">
+            <p class="choice-label">Quando vorresti iniziare?</p>
+            <div class="compact-choice-grid">
+              <button class="compact-choice" type="button" data-project-field="timing" data-value="Il prima possibile">
+                <strong>Il prima possibile</strong><small>Ho già deciso</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="timing" data-value="Entro 3 mesi">
+                <strong>Entro 3 mesi</strong><small>Sto organizzando i lavori</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="timing" data-value="Sto ancora valutando">
+                <strong>Sto valutando</strong><small>Voglio capire le opzioni</small><i>✓</i>
+              </button>
+            </div>
+          </div>
+
+          <div class="project-choice-group" data-project-group="projectType">
+            <p class="choice-label">In quale situazione ti trovi?</p>
+            <div class="compact-choice-grid">
+              <button class="compact-choice" type="button" data-project-field="projectType" data-value="Nuova casa">
+                <strong>Nuova casa</strong><small>Sto arredando da zero</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="projectType" data-value="Ristrutturazione">
+                <strong>Ristrutturazione</strong><small>Sto rinnovando casa</small><i>✓</i>
+              </button>
+              <button class="compact-choice" type="button" data-project-field="projectType" data-value="Sostituzione cucina">
+                <strong>Solo la cucina</strong><small>Sostituisco quella attuale</small><i>✓</i>
+              </button>
+            </div>
+          </div>
+
+          <label class="plan-upload" id="plan-upload">
+            <input id="planimetry" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp">
+            <span class="upload-icon" aria-hidden="true">＋</span>
+            <span class="upload-copy"><strong>Planimetria <em>facoltativa</em></strong><small id="plan-file-name">Clicca oppure trascina qui il file</small></span>
+          </label>
+
+          <p class="inline-error" id="project-error" hidden>Seleziona budget, tempistiche e situazione del progetto.</p>
+          <button class="primary-button" type="button" id="project-next">Continua <span>→</span></button>
+        </section>
+
+        <section class="step-screen" data-screen="contact" aria-labelledby="contact-title">
+          <div class="screen-copy compact-copy">
+            <span class="step-number">05</span>
+            <p class="section-label">Ultimo passaggio</p>
+            <h2 id="contact-title">Dove possiamo inviarti la proposta?</h2>
+          </div>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <label>Nome<input id="first-name" autocomplete="given-name" required></label>
+              <label>Cognome<input id="last-name" autocomplete="family-name" required></label>
+              <label>Email<input id="email" type="email" autocomplete="email" required></label>
+              <label>Telefono<input id="phone" type="tel" autocomplete="tel" required></label>
+              <label class="full-field">Comune<input id="city" autocomplete="address-level2" required></label>
+            </div>
+            <label class="privacy-row"><input id="privacy" type="checkbox" required><span>Acconsento al trattamento dei dati per essere ricontattato sul mio progetto.</span></label>
+            <p class="inline-error" id="contact-error" hidden>Controlla i campi obbligatori e il consenso privacy.</p>
+            <button class="primary-button" type="submit">Crea il mio progetto <span>→</span></button>
+          </form>
+        </section>
+      </aside>
+
+      <section class="visual-panel">
+        <div class="visual-heading">
+          <div>
+            <p class="eyebrow">Anteprima in tempo reale</p>
+            <h2 id="visual-title">La tua cucina prende forma.</h2>
+          </div>
+        </div>
+
+        <div class="render-stage" id="render-stage">
+          <div class="render-placeholder" id="render-placeholder">
+            <span>Atelier Casa Milano</span>
+            <strong>La tua cucina apparirà qui</strong>
+            <p>Inizia scegliendo la composizione.</p>
+          </div>
+          <img id="kitchen-render" alt="Anteprima della cucina configurata" hidden>
+          <div class="render-loader" id="render-loader" hidden></div>
+          <div class="render-message" id="render-message" hidden></div>
+        </div>
+
+        <div class="live-summary" aria-live="polite">
+          <div data-summary="layout"><span>Composizione</span><strong id="summary-layout">Da scegliere</strong></div>
+          <div data-summary="look"><span>Atmosfera</span><strong id="summary-look">Da scegliere</strong></div>
+          <div data-summary="top"><span>Piano</span><strong id="summary-top">Da scegliere</strong></div>
+        </div>
+
+        <div class="project-note" id="project-note">Scegli una composizione per iniziare a dare forma al progetto.</div>
+
+        <section class="result-card" id="result-card" hidden>
+          <p class="section-label">Progetto completato</p>
+          <h2>La tua cucina è pronta.</h2>
+          <p>Un nostro progettista analizzerà le tue preferenze e potrà sviluppare una proposta personalizzata.</p>
+          <div class="result-summary">
+            <div><span>Composizione</span><strong id="result-layout"></strong></div>
+            <div><span>Atmosfera</span><strong id="result-look"></strong></div>
+            <div><span>Piano</span><strong id="result-top"></strong></div>
+            <div hidden><span>ID progetto</span><strong id="result-project-id"></strong></div>
+          </div>
+          <a class="primary-button" id="booking-link" href="https://atelier-prenotazioni-telefoniche.vercel.app">Prenota la consulenza gratuita <span>→</span></a>
+          <button class="text-button" type="button" id="restart-button">Ricomincia</button>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
