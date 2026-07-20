@@ -11,7 +11,7 @@
 </head>
 <body>
   <main class="app-shell">
-    <section class="experience" aria-label="Configuratore cucine Atelier Casa Milano">
+    <section class="experience" aria-label="Percorso guidato cucina Atelier Casa Milano">
       <aside class="control-panel">
         <header class="brand-bar">
           <div>
@@ -20,7 +20,7 @@
           </div>
           <div class="progress-copy">
             <strong id="progress-percent">0%</strong>
-            <span id="progress-status">Inizia il tuo progetto</span>
+            <span id="progress-status">Inizia il percorso</span>
           </div>
         </header>
 
@@ -32,19 +32,19 @@
 
         <section class="intro-screen active-screen" data-screen="intro">
           <div class="screen-copy intro-copy">
-            <p class="section-label">Una consulenza guidata, non un semplice form</p>
-            <h2>Progetta la cucina che immagini.</h2>
-            <p>Scegli ciò che ti rappresenta. La cucina a destra cambierà dopo ogni selezione, con una leggera dissolvenza.</p>
+            <p class="section-label">Il primo passo verso la tua nuova cucina</p>
+            <h2>Raccontaci la cucina che immagini.</h2>
+            <p>In pochi minuti raccoglieremo le informazioni principali sul tuo progetto. Le tue preferenze ci aiuteranno a preparare una consulenza personalizzata e a proporti le soluzioni più adatte ai tuoi spazi.</p>
           </div>
-          <button class="primary-button" type="button" id="start-button">Inizia il progetto <span>→</span></button>
+          <button class="primary-button" type="button" id="start-button">Inizia l’esperienza <span>→</span></button>
         </section>
 
         <section class="step-screen" data-screen="layout" aria-labelledby="layout-title">
           <div class="screen-copy">
             <span class="step-number">01</span>
             <p class="section-label">Composizione</p>
-            <h2 id="layout-title">Come vivrai la tua cucina?</h2>
-            <p>Scegli la configurazione che assomiglia di più al tuo spazio.</p>
+            <h2 id="layout-title">Quale configurazione si avvicina di più alla tua idea?</h2>
+            <p>Non è una scelta definitiva: ci serve per comprendere meglio le tue preferenze e il tipo di spazio che immagini.</p>
           </div>
           <div class="option-grid option-grid-two">
             <button class="option-card" type="button" data-group="layout" data-value="lineare">
@@ -74,8 +74,8 @@
           <div class="screen-copy">
             <span class="step-number">02</span>
             <p class="section-label">Atmosfera</p>
-            <h2 id="look-title">Quale atmosfera ti rappresenta?</h2>
-            <p>Non è solo un colore: è la sensazione che vuoi vivere ogni giorno.</p>
+            <h2 id="look-title">Quale atmosfera preferisci?</h2>
+            <p>Seleziona lo stile che senti più vicino ai tuoi gusti. Durante la consulenza potremo valutare anche altre combinazioni.</p>
           </div>
           <div class="option-grid option-grid-three">
             <button class="option-card mood-card" type="button" data-group="look" data-value="chiaro">
@@ -100,8 +100,8 @@
           <div class="screen-copy">
             <span class="step-number">03</span>
             <p class="section-label">Piano di lavoro</p>
-            <h2 id="top-title">Quale piano immagini ogni giorno?</h2>
-            <p>Il dettaglio che definisce il carattere dell'intera cucina.</p>
+            <h2 id="top-title">Quale finitura preferisci per il piano di lavoro?</h2>
+            <p>Indica la soluzione che ti piace di più. In consulenza potremo mostrarti materiali, colori e alternative differenti.</p>
           </div>
           <div class="option-grid option-grid-two">
             <button class="option-card material-card" type="button" data-group="top" data-value="chiaro">
@@ -121,7 +121,8 @@
           <div class="screen-copy compact-copy">
             <span class="step-number">04</span>
             <p class="section-label">Il tuo progetto</p>
-            <h2 id="project-title">Raccontaci qualcosa in più.</h2>
+            <h2 id="project-title">Parlaci del tuo progetto.</h2>
+            <p>Queste informazioni ci permetteranno di preparare una consulenza più mirata.</p>
           </div>
 
           <div class="project-choice-group" data-project-group="budget">
@@ -172,18 +173,19 @@
           <label class="plan-upload" id="plan-upload">
             <input id="planimetry" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp">
             <span class="upload-icon" aria-hidden="true">＋</span>
-            <span class="upload-copy"><strong>Planimetria <em>facoltativa</em></strong><small id="plan-file-name">Clicca oppure trascina qui il file</small></span>
+            <span class="upload-copy"><strong>Hai una planimetria? <em>Facoltativa</em></strong><small id="plan-file-name">Allega una planimetria o una foto dell’ambiente</small></span>
           </label>
 
           <p class="inline-error" id="project-error" hidden>Seleziona budget, tempistiche e situazione del progetto.</p>
           <button class="primary-button" type="button" id="project-next">Continua <span>→</span></button>
         </section>
 
-        <section class="step-screen" data-screen="contact" aria-labelledby="contact-title">
+        <section class="step-screen contact-screen" data-screen="contact" aria-labelledby="contact-title">
           <div class="screen-copy compact-copy">
             <span class="step-number">05</span>
             <p class="section-label">Ultimo passaggio</p>
-            <h2 id="contact-title">Dove possiamo inviarti la proposta?</h2>
+            <h2 id="contact-title">Come possiamo contattarti?</h2>
+            <p>Ti ricontatteremo per organizzare la consulenza e approfondire il tuo progetto.</p>
           </div>
           <form id="contact-form" novalidate>
             <div class="form-grid">
@@ -194,8 +196,12 @@
               <label class="full-field">Comune<input id="city" autocomplete="address-level2" required></label>
             </div>
             <label class="privacy-row"><input id="privacy" type="checkbox" required><span>Acconsento al trattamento dei dati per essere ricontattato sul mio progetto.</span></label>
+            <div class="information-box">
+              <strong>Come utilizzeremo queste informazioni</strong>
+              <p>Le preferenze selezionate non costituiscono un progetto definitivo, un preventivo o un ordine. Servono esclusivamente a preparare una consulenza personalizzata con uno dei nostri progettisti, che ti guiderà verso la soluzione più adatta ai tuoi spazi, alle tue esigenze e al tuo budget.</p>
+            </div>
             <p class="inline-error" id="contact-error" hidden>Controlla i campi obbligatori e il consenso privacy.</p>
-            <button class="primary-button" type="submit">Crea il mio progetto <span>→</span></button>
+            <button class="primary-button" type="submit">Invia la richiesta <span>→</span></button>
           </form>
         </section>
       </aside>
@@ -203,16 +209,16 @@
       <section class="visual-panel">
         <div class="visual-heading">
           <div>
-            <p class="eyebrow">Anteprima in tempo reale</p>
-            <h2 id="visual-title">La tua cucina prende forma.</h2>
+            <p class="eyebrow">Ispirazione visiva</p>
+            <h2 id="visual-title">Visualizza le tue preferenze.</h2>
           </div>
         </div>
 
         <div class="render-stage" id="render-stage">
           <div class="render-placeholder" id="render-placeholder">
             <span>Atelier Casa Milano</span>
-            <strong>La tua cucina apparirà qui</strong>
-            <p>Inizia scegliendo la composizione.</p>
+            <strong>Le tue preferenze appariranno qui</strong>
+            <p>Inizia scegliendo la configurazione che senti più vicina alla tua idea.</p>
           </div>
           <img id="kitchen-render" alt="Anteprima della cucina configurata" hidden>
           <div class="render-loader" id="render-loader" hidden></div>
@@ -225,12 +231,12 @@
           <div data-summary="top"><span>Piano</span><strong id="summary-top">Da scegliere</strong></div>
         </div>
 
-        <div class="project-note" id="project-note">Scegli una composizione per iniziare a dare forma al progetto.</div>
+        <div class="project-note" id="project-note">Le immagini sono indicative e servono a raccontarci i tuoi gusti.</div>
 
         <section class="result-card" id="result-card" hidden>
-          <p class="section-label">Progetto completato</p>
-          <h2>La tua cucina è pronta.</h2>
-          <p>Un nostro progettista analizzerà le tue preferenze e potrà sviluppare una proposta personalizzata.</p>
+          <p class="section-label">Richiesta ricevuta</p>
+          <h2>Grazie! Abbiamo ricevuto le tue preferenze.</h2>
+          <p>Il nostro team analizzerà le informazioni inviate per preparare una consulenza personalizzata. Le scelte effettuate sono indicative e non costituiscono un progetto definitivo o un preventivo.</p>
           <div class="result-summary">
             <div><span>Composizione</span><strong id="result-layout"></strong></div>
             <div><span>Atmosfera</span><strong id="result-look"></strong></div>

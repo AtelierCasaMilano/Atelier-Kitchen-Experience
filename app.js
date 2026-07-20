@@ -6,13 +6,13 @@ const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbw-qR_Gxu0ep4SKYc
 const screenOrder = ["intro", "layout", "look", "top", "project", "contact"];
 const progressByScreen = { intro: 0, layout: 10, look: 30, top: 50, project: 70, contact: 88, result: 100 };
 const statusByScreen = {
-  intro: "Inizia il tuo progetto",
-  layout: "Scegli la composizione",
-  look: "La tua cucina sta prendendo forma",
-  top: "Definiamo gli ultimi dettagli",
-  project: "Raccontaci il tuo progetto",
+  intro: "Inizia il percorso",
+  layout: "Indica la configurazione che preferisci",
+  look: "Raccontaci i tuoi gusti",
+  top: "Indica la finitura che preferisci",
+  project: "Aggiungi qualche informazione",
   contact: "Quasi finito",
-  result: "Progetto completato ✓"
+  result: "Richiesta ricevuta ✓"
 };
 
 const labels = {
@@ -98,10 +98,10 @@ function updateSummary(changedGroup = "") {
 
   const completed = [state.layout, state.look, state.top].filter(Boolean).length;
   const notes = [
-    "Scegli una composizione per iniziare a dare forma al progetto.",
-    "Hai scelto la forma della tua cucina. Ora definiamone lo stile.",
-    "Perfetto. Adesso scegli il piano di lavoro che preferisci.",
-    "La configurazione visiva è completa."
+    "Le immagini sono indicative e servono a raccontarci i tuoi gusti.",
+    "Configurazione indicativa selezionata. Ora scegli l’atmosfera che preferisci.",
+    "Atmosfera selezionata. Indica ora la finitura del piano che senti più vicina ai tuoi gusti.",
+    "Preferenze visive raccolte: le approfondiremo insieme durante la consulenza."
   ];
   projectNote.textContent = notes[completed];
 }
@@ -113,11 +113,11 @@ function updateRender(changedGroup = "") {
 
   const visualTitle = document.getElementById("visual-title");
   if (!state.look) {
-    visualTitle.textContent = "La forma della tua cucina.";
+    visualTitle.textContent = "La configurazione che preferisci.";
   } else if (!state.top) {
-    visualTitle.textContent = "La tua cucina prende vita.";
+    visualTitle.textContent = "L’atmosfera che ti rappresenta.";
   } else {
-    visualTitle.textContent = "La tua cucina prende forma.";
+    visualTitle.textContent = "Le tue preferenze visive.";
   }
 
   const requestId = ++renderRequest;
@@ -271,7 +271,7 @@ const planFileName = document.getElementById("plan-file-name");
 
 function updatePlanFileName() {
   const file = planInput.files?.[0];
-  planFileName.textContent = file ? file.name : "Clicca oppure trascina qui il file";
+  planFileName.textContent = file ? file.name : "Allega una planimetria o una foto dell’ambiente";
 }
 
 planInput.addEventListener("change", updatePlanFileName);
@@ -318,7 +318,7 @@ document.getElementById("contact-form").addEventListener("submit", async (event)
     showResult(result.id || "");
   } catch (error) {
     console.error(error);
-    errorMessage.textContent = "Non siamo riusciti a salvare il progetto. Riprova tra qualche secondo.";
+    errorMessage.textContent = "Non siamo riusciti a inviare la richiesta. Riprova tra qualche secondo.";
     errorMessage.hidden = false;
   } finally {
     submitButton.disabled = false;
