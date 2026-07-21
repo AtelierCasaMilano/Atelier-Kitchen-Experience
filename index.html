@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Kitchen Experience di Atelier Casa Milano: scegli layout, colore delle ante e top della tua cucina ideale."
+  >
+
+  <title>Kitchen Experience | Atelier Casa Milano</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app-shell">
+
+    <section class="experience">
+
+      <!-- =====================================================
+           PANNELLO SINISTRO
+      ====================================================== -->
+
+      <div class="control-panel" id="control-panel">
+
+        <!-- HEADER -->
+
+        <header class="brand-bar">
+
+          <div>
+            <p class="eyebrow">Atelier Casa Milano</p>
+            <h1>Kitchen Experience</h1>
+          </div>
+
+          <div
+            class="step-indicator"
+            id="step-indicator"
+            aria-label="Avanzamento configurazione"
+          >
+
+            <div class="step-dots" aria-hidden="true">
+              <span class="step-dot active"></span>
+              <span class="step-dot"></span>
+              <span class="step-dot"></span>
+              <span class="step-dot"></span>
+            </div>
+
+            <p id="step-copy">Passo 1 di 4</p>
+
+          </div>
+
+        </header>
+
+
+        <!-- =================================================
+             SCHERMATA INTRO
+        ================================================== -->
+
+        <section
+          class="screen active-screen"
+          data-screen="intro"
+          aria-hidden="false"
+        >
+
+          <div class="screen-copy intro-copy">
+
+            <p class="section-label">Atelier Kitchen Experience</p>
+
+            <h2>La tua cucina, prima ancora di immaginarla.</h2>
+
+            <p>
+              Un percorso guidato per definire composizione, finiture
+              e atmosfera della tua prossima cucina.
+            </p>
+
+          </div>
+
+          <div class="intro-benefits" aria-label="Vantaggi del configuratore">
+            <span>Anteprima immediata</span>
+            <span>Meno di 2 minuti</span>
+            <span>Consulenza gratuita</span>
+          </div>
+
+          <div class="screen-actions single-action">
+
+            <button
+              class="primary-button"
+              id="start-button"
+              type="button"
+            >
+              Inizia
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHERMATA 1 — LAYOUT
+        ================================================== -->
+
+        <section
+          class="screen"
+          data-screen="layout"
+          aria-hidden="true"
+        >
+
+          <div class="screen-copy compact-copy">
+
+            <p class="section-label">01 · Composizione</p>
+
+            <h2>Come vuoi vivere la tua cucina?</h2>
+
+            <p>
+              Scegli la disposizione che si avvicina maggiormente
+              alla cucina che immagini.
+            </p>
+
+          </div>
+
+          <div
+            class="option-grid option-grid-two"
+            aria-label="Scelta configurazione cucina"
+          >
+
+            <button
+              class="option-card"
+              type="button"
+              data-group="layout"
+              data-value="lineare"
+              data-index="01"
+              aria-pressed="false"
+            >
+
+              <span
+                class="diagram diagram-lineare"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Lineare</strong>
+                <small>
+                  Tutti gli elementi su una sola parete.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="option-card"
+              type="button"
+              data-group="layout"
+              data-value="angolare"
+              data-index="02"
+              aria-pressed="false"
+            >
+
+              <span
+                class="diagram diagram-angolare"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Angolare</strong>
+                <small>
+                  Una composizione sviluppata su due pareti.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="option-card"
+              type="button"
+              data-group="layout"
+              data-value="penisola"
+              data-index="03"
+              aria-pressed="false"
+            >
+
+              <span
+                class="diagram diagram-penisola"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Penisola</strong><em class="card-badge">Più richiesta</em>
+                <small>
+                  Una soluzione conviviale collegata alla cucina.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="option-card"
+              type="button"
+              data-group="layout"
+              data-value="isola"
+              data-index="04"
+              aria-pressed="false"
+            >
+
+              <span
+                class="diagram diagram-isola"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Isola</strong><em class="card-badge">Design</em>
+                <small>
+                  Un elemento centrale protagonista dell’ambiente.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+          </div>
+
+          <p
+            class="inline-error"
+            id="layout-error"
+            hidden
+          >
+            Seleziona una configurazione per continuare.
+          </p>
+
+          <div class="screen-actions">
+
+            <button
+              class="secondary-button"
+              type="button"
+              data-action="back"
+            >
+              <span aria-hidden="true">←</span>
+              Indietro
+            </button>
+
+            <button
+              class="primary-button"
+              id="layout-next"
+              type="button"
+            >
+              Continua
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHERMATA 2 — ANTE
+        ================================================== -->
+
+        <section
+          class="screen"
+          data-screen="front"
+          aria-hidden="true"
+        >
+
+          <div class="screen-copy compact-copy">
+
+            <p class="section-label">02 · Ante</p>
+
+            <h2>Scegli il carattere delle ante.</h2>
+
+            <p>
+              La finitura delle ante definisce il carattere
+              principale della cucina.
+            </p>
+
+          </div>
+
+          <div
+            class="material-grid"
+            aria-label="Scelta colore delle ante"
+          >
+
+            <button
+              class="material-card"
+              type="button"
+              data-group="front"
+              data-value="bianco"
+              aria-pressed="false"
+            >
+
+              <span
+                class="material-sample front-white"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Laccato bianco opaco</strong>
+                <small>
+                  Luminoso, essenziale e senza tempo.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="material-card"
+              type="button"
+              data-group="front"
+              data-value="rovere"
+              aria-pressed="false"
+            >
+
+              <span
+                class="material-sample front-oak"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Rovere naturale</strong>
+                <small>
+                  Caldo, materico e contemporaneo.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="material-card"
+              type="button"
+              data-group="front"
+              data-value="antracite"
+              aria-pressed="false"
+            >
+
+              <span
+                class="material-sample front-dark"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Laccato antracite opaco</strong>
+                <small>
+                  Elegante, deciso e sofisticato.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+          </div>
+
+          <p
+            class="inline-error"
+            id="front-error"
+            hidden
+          >
+            Seleziona il colore delle ante per continuare.
+          </p>
+
+          <div class="screen-actions">
+
+            <button
+              class="secondary-button"
+              type="button"
+              data-action="back"
+            >
+              <span aria-hidden="true">←</span>
+              Indietro
+            </button>
+
+            <button
+              class="primary-button"
+              id="front-next"
+              type="button"
+            >
+              Continua
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHERMATA 3 — TOP
+        ================================================== -->
+
+        <section
+          class="screen"
+          data-screen="top"
+          aria-hidden="true"
+        >
+
+          <div class="screen-copy compact-copy">
+
+            <p class="section-label">03 · Piano di lavoro</p>
+
+            <h2>Completa la cucina con il top.</h2>
+
+            <p>
+              Completa la cucina selezionando la superficie
+              che meglio si abbina alle ante.
+            </p>
+
+          </div>
+
+          <div
+            class="material-grid material-grid-two"
+            aria-label="Scelta colore del top"
+          >
+
+            <button
+              class="material-card"
+              type="button"
+              data-group="top"
+              data-value="chiaro"
+              aria-pressed="false"
+            >
+
+              <span
+                class="material-sample top-light"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Quarzo effetto pietra chiara</strong>
+                <small>
+                  Delicato, luminoso e versatile.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+
+            <button
+              class="material-card"
+              type="button"
+              data-group="top"
+              data-value="antracite"
+              aria-pressed="false"
+            >
+
+              <span
+                class="material-sample top-dark"
+                aria-hidden="true"
+              ></span>
+
+              <span>
+                <strong>Quarzo antracite</strong>
+                <small>
+                  Intenso, elegante e contemporaneo.
+                </small>
+              </span>
+
+              <i aria-hidden="true">✓</i>
+
+            </button>
+
+          </div>
+
+          <p
+            class="inline-error"
+            id="top-error"
+            hidden
+          >
+            Seleziona il colore del top per continuare.
+          </p>
+
+          <div class="screen-actions">
+
+            <button
+              class="secondary-button"
+              type="button"
+              data-action="back"
+            >
+              <span aria-hidden="true">←</span>
+              Indietro
+            </button>
+
+            <button
+              class="primary-button"
+              id="top-next"
+              type="button"
+            >
+              Continua
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHERMATA 4 — CONTATTI
+        ================================================== -->
+
+        <section
+          class="screen"
+          data-screen="contact"
+          aria-hidden="true"
+        >
+
+          <div class="screen-copy compact-copy">
+
+            <p class="section-label">04 · Consulenza</p>
+
+            <h2>Trasformiamo le tue scelte in un progetto.</h2>
+
+            <p>
+              Questa è una rappresentazione indicativa della cucina
+              in base alle tue preferenze. Lascia i tuoi contatti:
+              un progettista di Atelier Casa Milano realizzerà una
+              proposta realmente su misura per il tuo ambiente.
+            </p>
+
+          </div>
+
+          <form id="contact-form" novalidate>
+
+            <div class="form-grid">
+
+              <label for="name">
+                Nome e cognome
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Mario Rossi"
+                  required
+                >
+              </label>
+
+
+              <label for="phone">
+                Telefono
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  placeholder="+39 333 1234567"
+                  required
+                >
+              </label>
+
+
+              <label class="full-field" for="email">
+                Email
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="nome@email.it"
+                  required
+                >
+              </label>
+
+            </div>
+
+
+            <label class="privacy-row">
+
+              <input
+                id="privacy"
+                name="privacy"
+                type="checkbox"
+                required
+              >
+
+              <span>
+                Acconsento al trattamento dei dati personali
+                per essere ricontattato da Atelier Casa Milano.
+              </span>
+
+            </label>
+
+
+            <p
+              class="inline-error"
+              id="contact-error"
+              hidden
+            >
+              Controlla i dati inseriti e accetta l’informativa
+              prima di continuare.
+            </p>
+
+
+            <div class="screen-actions">
+
+              <button
+                class="secondary-button"
+                type="button"
+                data-action="back"
+              >
+                <span aria-hidden="true">←</span>
+                Indietro
+              </button>
+
+              <button
+                class="primary-button"
+                id="submit-button"
+                type="submit"
+              >
+                Invia la richiesta
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+          </form>
+
+        </section>
+
+
+        <!-- =================================================
+             SCHERMATA FINALE
+        ================================================== -->
+
+        <section
+          class="screen"
+          data-screen="success"
+          aria-hidden="true"
+        >
+
+          <div class="screen-copy success-copy">
+
+            <p class="section-label">Configurazione completata</p>
+
+            <h2>Questa è la cucina che hai immaginato.</h2>
+
+            <p>
+              La tua selezione è stata inviata correttamente.
+              Ora possiamo trasformarla in un progetto costruito
+              sulle misure reali del tuo ambiente.
+            </p>
+
+          </div>
+
+          <div class="success-summary" aria-label="Riepilogo finale">
+            <div><span>Layout</span><strong id="success-layout">—</strong></div>
+            <div><span>Ante</span><strong id="success-front">—</strong></div>
+            <div><span>Top</span><strong id="success-top">—</strong></div>
+          </div>
+
+          <div class="material-chips" aria-label="Finiture selezionate">
+            <span id="chip-layout">Layout</span>
+            <span id="chip-front">Ante</span>
+            <span id="chip-top">Top</span>
+          </div>
+
+          <p class="showroom-message">
+            Nel nostro atelier potrai vedere e toccare con mano le finiture selezionate
+            e sviluppare il progetto sulle misure reali del tuo ambiente.
+          </p>
+
+          <div class="success-actions">
+
+            <a
+              class="primary-button"
+              id="booking-link"
+              href="https://atelier-prenotazioni-telefoniche.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prenota la consulenza gratuita
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <button
+              class="text-button"
+              id="restart-button"
+              type="button"
+            >
+              Ricomincia la configurazione
+            </button>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+      <!-- =====================================================
+           PANNELLO DESTRO
+      ====================================================== -->
+
+      <aside class="visual-panel" id="visual-panel">
+
+        <div class="visual-heading">
+
+          <div>
+            <p class="eyebrow">Anteprima</p>
+
+            <h2 id="visual-title">
+              La tua cucina prende forma, scelta dopo scelta.
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="visual-meta">
+          <span>Configurazione indicativa</span>
+          <span>Progetto personalizzabile in atelier</span>
+        </div>
+
+        <div class="render-stage" id="render-stage">
+
+          <div class="render-sheen" aria-hidden="true"></div>
+          <div class="render-status" aria-hidden="true">
+            <span class="status-dot"></span>
+            <span id="render-status-copy">Anteprima progetto</span>
+          </div>
+
+          <div
+            class="render-placeholder"
+            id="render-placeholder"
+          >
+
+            <span>Atelier Casa Milano</span>
+
+            <strong>La tua cucina apparirà qui</strong>
+
+            <p>
+              Inizia scegliendo la configurazione.
+            </p>
+
+          </div>
+
+
+          <img
+            id="kitchen-render"
+            src=""
+            alt="Anteprima della cucina configurata"
+            hidden
+          >
+
+
+          <div
+            class="render-loader"
+            id="render-loader"
+            aria-label="Caricamento anteprima"
+            hidden
+          ></div>
+
+
+          <p
+            class="render-message"
+            id="render-message"
+            hidden
+          ></p>
+
+        </div>
+
+
+        <div class="summary-heading">
+          <span>La tua configurazione</span>
+          <small>Aggiornata in tempo reale</small>
+        </div>
+
+        <div
+          class="live-summary"
+          aria-label="Riepilogo delle preferenze selezionate"
+        >
+
+          <div>
+            <span>Layout</span>
+            <strong id="summary-layout">Da scegliere</strong>
+          </div>
+
+          <div>
+            <span>Ante</span>
+            <strong id="summary-front">Da scegliere</strong>
+          </div>
+
+          <div>
+            <span>Top</span>
+            <strong id="summary-top">Da scegliere</strong>
+          </div>
+
+        </div>
+
+
+        <p class="project-note">
+          Immagine indicativa. Il progetto finale sarà sviluppato
+          su misura per il tuo ambiente.
+        </p>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
